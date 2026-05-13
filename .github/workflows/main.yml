@@ -1,0 +1,16 @@
+name: Test Server Control
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: self-hosted
+
+    steps:
+      - name: Test command on Tencent server
+        run: |
+          whoami
+          pwd
+          python3 --version
+          echo "GitHub 已经可以控制我的腾讯云服务器执行命令了"
